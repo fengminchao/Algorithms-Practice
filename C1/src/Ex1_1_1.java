@@ -8,5 +8,6 @@ public class Ex1_1_1 {
         System.out.println(2.0e-6 * 100000000.1 + "");
         boolean b = true && false || true && true;
         System.out.println(b + "");
+        StdOut.print("fas");
     }
 }

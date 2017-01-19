@@ -18,4 +18,6 @@ public class Ex1_2_6 {
             System.out.println("they are not circular rotation");
         }
     }
+
+
 }

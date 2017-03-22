@@ -36,7 +36,6 @@ public class Ex127 {
             for (int i = 0; i < array.length; ++i) {
                 final char old = array[i];
                 for (char c = 'a'; c <= 'z'; c++) {
-                    // 防止同字母替换
                     if (c == array[i]) continue;
 
                     array[i] = c;
@@ -46,7 +45,7 @@ public class Ex127 {
                             !visited.contains(newState)) {
                         result.add(newState);
                     }
-                    array[i] = old; // 恢复该单词
+                    array[i] = old;
                 }
             }
 
@@ -58,8 +57,6 @@ public class Ex127 {
         while (!current.isEmpty()) {
             ++level;
             while (!current.isEmpty()) {
-                // 千万不能用 const auto&，pop() 会删除元素，
-                // 引用就变成了悬空引用
                 String state = current.poll();
 
                 if (stateIsTarget.apply(state)) {

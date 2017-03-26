@@ -1,5 +1,6 @@
 
 import java.util.*;
+import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.function.Function;
 
 /**
@@ -18,62 +19,44 @@ public class Ex127 {
     }
 
     public int ladderLength(String beginWord, String endWord, List<String> wordList) {
-        Queue<String> current = new LinkedList<>(); // 当前层
-        Queue<String> next = new LinkedList<>();    // 下一层
-        HashSet<String> visited = new HashSet<>();  // 判重
+        Queue<String> queue = new LinkedList<>();
+        queue.add(beginWord);
+        List<String> lists = new CopyOnWriteArrayList<>(wordList);
+        int result = bfs(endWord, lists, queue, 1);
+        return result;
+    }
 
-        int level = -1;  // 层次
-
-        final Function<String, Boolean> stateIsValid = (String s) ->
-                wordList.contains(s) || s.equals(endWord);
-        final Function<String, Boolean> stateIsTarget = (String s) ->
-                s.equals(endWord);
-
-        final Function<String, HashSet<String>> stateExtend = (String s) -> {
-            HashSet<String> result = new HashSet<>();
-
-            char[] array = s.toCharArray();
-            for (int i = 0; i < array.length; ++i) {
-                final char old = array[i];
-                for (char c = 'a'; c <= 'z'; c++) {
-                    if (c == array[i]) continue;
-
-                    array[i] = c;
-                    String newState = new String(array);
-
-                    if (stateIsValid.apply(newState) &&
-                            !visited.contains(newState)) {
-                        result.add(newState);
-                    }
-                    array[i] = old;
-                }
+    public int bfs(String endWord, List<String> wordList, Queue<String> queue, int deep) {
+        for (String s : queue){
+            if (s.equals(endWord)){
+                return deep;
             }
-
-            return result;
-        };
-
-        current.offer(beginWord);
-        visited.add(beginWord);
-        while (!current.isEmpty()) {
-            ++level;
-            while (!current.isEmpty()) {
-                String state = current.poll();
-
-                if (stateIsTarget.apply(state)) {
-                    return level + 1;
-                }
-
-                HashSet<String> newStates = stateExtend.apply(state);
-                for (String newState : newStates) {
-                    next.offer(newState);
-                    visited.add(newState);
-                }
-            }
-            // swap
-            Queue<String> tmp = current;
-            current = next;
-            next = tmp;
         }
-        return 0;
+        if (queue.size() == 0) {
+            return 0;
+        }
+
+        int size = queue.size();
+
+        for (int i = 0;i < size;i++) {
+            String s = queue.poll();
+            for (String word : wordList) {
+                if (judge(s,word)){
+                    queue.add(word);
+                    wordList.remove(word);
+                }
+            }
+        }
+        return bfs(endWord,wordList,queue,++deep);
+    }
+
+    public boolean judge(String word, String transWord) {
+        int diff = 0;
+        for (int i = 0; i < word.length(); i++) {
+            if (word.charAt(i) != transWord.charAt(i)){
+                diff++;
+            }
+        }
+        return diff == 1;
     }
 }

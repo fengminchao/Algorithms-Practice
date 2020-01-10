@@ -5,14 +5,14 @@ import java.util.Scanner;
 /**
  * Created by ybao on 17/2/21.
  */
-public class Ex43 {
+public class MultiplyStrings {
 
     public static void main(String[] args) {
         Scanner s1 = new Scanner(System.in);
         Scanner s2 = new Scanner(System.in);
         String num1 = s1.nextLine();
         String num2 = s2.nextLine();
-        Ex43 ex = new Ex43();
+        MultiplyStrings ex = new MultiplyStrings();
         System.out.println(ex.multiply(num1,num2));
     }
 

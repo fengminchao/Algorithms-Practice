@@ -1,13 +1,10 @@
-import java.util.HashSet;
-import java.util.Set;
-
 /**
  * Created by ybao on 17/2/12.
  */
-public class Ex73 {
+public class SetMatrixZeroes {
 
     public static void main(String[] args) {
-        Ex73 e = new Ex73();
+        SetMatrixZeroes e = new SetMatrixZeroes();
         int[][] matrix = {{1, 0, 1}, {0, 1, 1}, {1, 1, 1}};
         e.setZeroes(matrix);
     }

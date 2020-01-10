@@ -13,11 +13,11 @@
  * <p>
  * The number of ways decoding "12" is 2.
  */
-public class Ex91 {
+public class DecodeWays {
 
     public static void main(String[] args) {
         String s = "230";
-        int result = new Ex91().numDecodings(s);
+        int result = new DecodeWays().numDecodings(s);
         System.out.println(result);
 
     }

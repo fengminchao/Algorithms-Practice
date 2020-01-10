@@ -4,11 +4,11 @@ import java.util.Map;
 /**
  * Created by ybao on 17/3/23.
  */
-public class Ex76 {
+public class MinimumWindowSubstring {
     public static void main(String[] args) {
         String s = "ADOBECODEBANC";
         String t = "ABC";
-        String min = new Ex76().minWindow(s, t);
+        String min = new MinimumWindowSubstring().minWindow(s, t);
         System.out.println(min);
     }
 

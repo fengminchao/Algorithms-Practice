@@ -1,12 +1,12 @@
 /**
  * Created by ybao on 17/4/2.
  */
-public class Ex4 {
+public class MedianofTwoSortedArrays {
 
     public static void main(String[] args) {
         int[] a = {2, 4};
         int[] b = {1, 3, 5};
-        double d = new Ex4().findMedianSortedArrays(a, b);
+        double d = new MedianofTwoSortedArrays().findMedianSortedArrays(a, b);
         System.out.println(d);
     }
 

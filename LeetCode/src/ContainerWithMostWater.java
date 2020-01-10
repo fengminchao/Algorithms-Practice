@@ -1,10 +1,10 @@
 /**
  * Created by ybao on 17/2/12.
  */
-public class Ex11 {
+public class ContainerWithMostWater {
 
     public static void main(String[] args) {
-        Ex11 e = new Ex11();
+        ContainerWithMostWater e = new ContainerWithMostWater();
         int[] height = {1, 2, 4, 3};
         System.out.println(e.maxArea(height));
     }

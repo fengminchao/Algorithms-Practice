@@ -1,17 +1,16 @@
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 
 /**
  * Created by ybao on 17/3/15.
  */
-public class Ex39 {
+public class CombinationSum {
 
     public static void main(String[] args) {
         int[] nums = {2,3,4,5};
         int target = 7;
-        List<List<Integer>> numList = new Ex39().combinationSum(nums,target);
+        List<List<Integer>> numList = new CombinationSum().combinationSum(nums,target);
         System.out.println(numList);
     }
     public List<List<Integer>> combinationSum(int[] candidates, int target) {

@@ -3,11 +3,11 @@ import java.util.*;
 /**
  * Created by ybao on 17/4/7.
  */
-public class Ex49 {
+public class GroupAnagrams {
 
     public static void main(String[] args) {
         String[] str = new String[]{"pad", "dab", "mug", "gum", "geo", "boa", "jag", "mig", "hug", "tee", "lyx", "wac", "box", "win", "rex", "baa", "rap", "mhz", "hep", "bad", "fun", "sub", "fri", "pyx", "leo", "jun", "dun", "sin", "adz", "err", "lbj", "ewe", "sue", "rye", "web", "wig", "man", "sis", "hay", "put", "duo"};
-        List<List<String>> list = new Ex49().groupAnagrams(str);
+        List<List<String>> list = new GroupAnagrams().groupAnagrams(str);
         System.out.println(list);
 
     }

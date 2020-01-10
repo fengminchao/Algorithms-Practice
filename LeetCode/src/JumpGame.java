@@ -1,10 +1,10 @@
 /**
  * Created by ybao on 17/3/20.
  */
-public class Ex55 {
+public class JumpGame {
     public static void main(String[] args) {
         int[] nums = {1, 0, 2};
-        boolean b = new Ex55().canJump(nums);
+        boolean b = new JumpGame().canJump(nums);
         System.out.println(b);
     }
 

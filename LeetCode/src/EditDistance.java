@@ -1,11 +1,11 @@
 /**
  * Created by ybao on 17/3/27.
  */
-public class Ex72 {
+public class EditDistance {
     public static void main(String[] args) {
         String w1 = "home";
         String w2 = "school";
-        int result = new Ex72().minDistance(w1,w2);
+        int result = new EditDistance().minDistance(w1,w2);
         System.out.println(result);
     }
 

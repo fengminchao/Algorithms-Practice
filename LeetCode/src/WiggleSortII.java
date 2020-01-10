@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * Created by ybao on 17/1/21.
  */
-public class Ex324 {
+public class WiggleSortII {
 
     public static void main(String[] args) {
 

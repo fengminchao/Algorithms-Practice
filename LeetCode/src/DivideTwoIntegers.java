@@ -7,7 +7,7 @@ import java.util.Scanner;
  * <p>
  * Created by ybao on 17/1/18.
  */
-public class Ex29 {
+public class DivideTwoIntegers {
 
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);

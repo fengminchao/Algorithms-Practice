@@ -6,10 +6,10 @@ import java.util.Map;
 /**
  * Created by ybao on 17/3/16.
  */
-public class Ex17 {
+public class LetterCombinationsofaPhoneNumber {
 
     public static void main(String[] args) {
-        List<String> list = new Ex17().letterCombinations("23");
+        List<String> list = new LetterCombinationsofaPhoneNumber().letterCombinations("23");
         System.out.println(list);
     }
 

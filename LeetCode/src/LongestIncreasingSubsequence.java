@@ -1,11 +1,11 @@
 /**
  * Created by ybao on 17/3/22.
  */
-public class Ex300 {
+public class LongestIncreasingSubsequence {
 
     public static void main(String[] args) {
         int[] nums = {10, 9, 2, 5, 3, 7, 101, 18};
-        int result = new Ex300().lengthOfLIS(nums);
+        int result = new LongestIncreasingSubsequence().lengthOfLIS(nums);
         System.out.println(result);
     }
 

@@ -1,16 +1,15 @@
 import java.util.LinkedList;
 import java.util.List;
-import java.util.TreeSet;
 
 /**
  * Created by ybao on 17/4/2.
  */
-public class Ex60 {
+public class PermutationSequence {
 
     public static void main(String[] args) {
         int n = 5;
         int k = 29;
-        String s = new Ex60().getPermutation(n,k);
+        String s = new PermutationSequence().getPermutation(n,k);
         System.out.println(s);
     }
 

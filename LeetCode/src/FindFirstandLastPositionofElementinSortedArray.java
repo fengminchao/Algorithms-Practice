@@ -1,20 +1,14 @@
-import com.sun.deploy.util.ArrayUtil;
-import com.sun.tools.javac.util.ArrayUtils;
-
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collection;
-import java.util.List;
 
 /**
  * Created by ybao on 17/3/21.
  */
-public class Ex34 {
+public class FindFirstandLastPositionofElementinSortedArray {
 
     public static void main(String[] args) {
         int[] nums = {5, 7, 7, 8, 8, 10};
         int target = 8;
-        int[] index = new Ex34().searchRange(nums, target);
+        int[] index = new FindFirstandLastPositionofElementinSortedArray().searchRange(nums, target);
         String s = Arrays.toString(index);
         System.out.println(s);
     }

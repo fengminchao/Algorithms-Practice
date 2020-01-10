@@ -1,12 +1,11 @@
 
 import java.util.*;
 import java.util.concurrent.CopyOnWriteArrayList;
-import java.util.function.Function;
 
 /**
  * Created by ybao on 17/3/20.
  */
-public class Ex127 {
+public class WordLadder {
 
     public static void main(String[] args) {
         String beginWord = "hit";
@@ -14,7 +13,7 @@ public class Ex127 {
         List<String> wordList = new ArrayList<>();
         String[] words = {"hot", "dot", "dog", "log", "cog"};
         wordList.addAll(Arrays.asList(words));
-        int length = new Ex127().ladderLength(beginWord, endWord, wordList);
+        int length = new WordLadder().ladderLength(beginWord, endWord, wordList);
         System.out.println(length);
     }
 

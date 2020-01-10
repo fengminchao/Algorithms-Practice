@@ -1,7 +1,7 @@
 /**
  * Created by ybao on 17/3/30.
  */
-public class Ex24 {
+public class SwapNodesinPairs {
 
     public ListNode swapPairs(ListNode head) {
         if (head == null || head.next == null){
@@ -28,7 +28,7 @@ public class Ex24 {
             node.next = listNode;
             node = listNode;
         }
-        node = new Ex24().swapPairs(headNode);
+        node = new SwapNodesinPairs().swapPairs(headNode);
         while (node != null) {
             System.out.println(node.val);
             node = node.next;

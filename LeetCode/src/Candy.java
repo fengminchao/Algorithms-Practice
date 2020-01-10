@@ -11,7 +11,7 @@
  * <p>
  * Created by ybao on 17/3/30.
  */
-public class Ex135 {
+public class Candy {
 
     public int candy(int[] ratings) {
         int n = ratings.length;
@@ -42,7 +42,7 @@ public class Ex135 {
 
     public static void main(String[] args) {
         int[] children = {1,2,4,5,4,3,2,1};
-        int result = new Ex135().candy(children);
+        int result = new Candy().candy(children);
         System.out.println(result);
     }
 }

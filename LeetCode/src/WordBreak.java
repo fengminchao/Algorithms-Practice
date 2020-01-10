@@ -4,14 +4,14 @@ import java.util.List;
 /**
  * Created by ybao on 17/3/27.
  */
-public class Ex139 {
+public class WordBreak {
 
     public static void main(String[] args) {
         String s = "leetcode";
         List<String> dict = new ArrayList<>();
         dict.add("leet");
         dict.add("code");
-        boolean result = new Ex139().wordBreak(s, dict);
+        boolean result = new WordBreak().wordBreak(s, dict);
         System.out.println(result);
     }
 

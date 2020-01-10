@@ -3,11 +3,11 @@ import java.util.Stack;
 /**
  * Created by ybao on 17/3/23.
  */
-public class Ex150 {
+public class EvaluateReversePolishNotation {
 
     public static void main(String[] args) {
         String[] arr =  {"4", "13", "5", "/", "+"};
-        int result = new Ex150().evalRPN(arr);
+        int result = new EvaluateReversePolishNotation().evalRPN(arr);
         System.out.println(result);
     }
 

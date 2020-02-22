@@ -2,6 +2,7 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Deque;
 import java.util.LinkedList;
+import java.util.Map;
 
 public class PrintZhiTree {
     public class TreeNode {
@@ -14,6 +15,8 @@ public class PrintZhiTree {
 
         }
     }
+
+    private Map map = {name:1,age:18};
 
     public ArrayList<ArrayList<Integer>> Print(TreeNode pRoot) {
         boolean direction = false;

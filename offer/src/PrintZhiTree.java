@@ -16,8 +16,6 @@ public class PrintZhiTree {
         }
     }
 
-    private Map map = {name:1,age:18};
-
     public ArrayList<ArrayList<Integer>> Print(TreeNode pRoot) {
         boolean direction = false;
         ArrayList<ArrayList<Integer>> result = new ArrayList<>();

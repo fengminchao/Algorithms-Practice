@@ -6,7 +6,7 @@ import java.util.concurrent.ThreadLocalRandom;
  * Created by ybao on 17/3/24.
  * quick sort
  */
-public class Ex2_3_7 {
+public class QuickSort {
 
     static int[] nums = {4, 5, 3, 2, 29, 43, 46, 25, 36};
 

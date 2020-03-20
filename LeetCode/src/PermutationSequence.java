@@ -7,9 +7,9 @@ import java.util.List;
 public class PermutationSequence {
 
     public static void main(String[] args) {
-        int n = 5;
-        int k = 29;
-        String s = new PermutationSequence().getPermutation(n,k);
+        int n = 4;
+        int k = 6;
+        String s = new PermutationSequence().getPermutation(n, k);
         System.out.println(s);
     }
 
@@ -21,29 +21,24 @@ public class PermutationSequence {
             i--;
         }
 
-        int[] nums = new int[9];
+        int[] nums = new int[n];
 
         i = n - 1;
-        for (; i > 1; i--) {
-            if (k / product > 0) {
-//                nums[i] = k / product + 1;
-                nums[i] = (k + 1) / product;
-                k = k % product;
-                product /= i;
-            }
+        k = k - 1;
+        while (k != 0) {
+            nums[i] = k / product;
+            k = k % product;
+            product /= i;
+            i--;
         }
+        nums[i] = k;
         List<Integer> list = new LinkedList();
         for (int j = 1; j <= n; j++) {
             list.add(j);
         }
         StringBuilder sb = new StringBuilder("");
-        for (int j = n - 1;j >= 0;j--){
-            System.out.println("nums" + nums[j]);
-            if (nums[j] != 0){
-                sb.append(list.remove(nums[j]));
-            }else {
-                sb.append(list.remove(0));
-            }
+        for (int j = n - 1; j >= 0; j--) {
+            sb.append(list.remove(nums[j]));
         }
         return sb.toString();
     }
